@@ -1,4 +1,4 @@
-package module01.ejercicio04;
+package module01.laboratorio01.ejercicio04;
 
 public class ejercicio04 {
    public static void main(String[] args) {
