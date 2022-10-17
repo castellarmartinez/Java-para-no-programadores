@@ -10,11 +10,10 @@ public class ejercicio01 {
         int numeroMenor = Integer.MAX_VALUE;
         int numeroIngresado;
 
-        System.out.println("Suma de números ingresados: ");
-        System.out.print("Ingresa un número: ");
-        numeroIngresado = input.nextInt();
+        do {
+            System.out.print("Para culminar escriba 0, de lo contrario escriba cualquier número: ");
+            numeroIngresado = input.nextInt();
 
-        while (numeroIngresado != 0) {
             suma += numeroIngresado;
 
             if (numeroIngresado > numeroMayor) {
@@ -24,15 +23,12 @@ public class ejercicio01 {
             if (numeroIngresado < numeroMenor) {
                 numeroMenor = numeroIngresado;
             }
+        } while (numeroIngresado != 0);
 
-            System.out.print("Ingresa el siguiente número: ");
-            numeroIngresado = input.nextInt();
-        }
-
-        if (numeroMenor != Integer.MAX_VALUE && numeroMayor != Integer.MIN_VALUE) {
-            System.out.println("La suma de los números ingresados es: " + suma);
-            System.out.println("El número mayor ingresado es: " + numeroMayor);
-            System.out.println("El número menor ingresado es: " + numeroMenor);
+        if (suma != 0) {
+            System.out.println("La suma total es: " + suma);
+            System.out.println("El número mayor es: " + numeroMayor);
+            System.out.println("El número menor es: " + numeroMenor);
         } else {
             System.out.println("No se ingresaron números");
         }
